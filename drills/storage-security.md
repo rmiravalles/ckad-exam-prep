@@ -1,6 +1,6 @@
-# Storage and Security Drills
+# 🛡️ Storage and Security Drills
 
-## SS-01: PVC and Pod mount
+## 🧪 SS-01: PVC and Pod mount
 
 - **Difficulty:** Core
 - **Target time:** 7 minutes

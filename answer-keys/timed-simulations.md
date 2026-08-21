@@ -1,6 +1,6 @@
-# Timed Simulation Answer Keys
+# 🔑 Timed Simulation Answer Keys
 
-## M-01: Mixed fundamentals
+## ✅ M-01: Mixed fundamentals
 
 Use the answer keys for [W-01](workloads.md#w-01-deployment-with-container-port), [N-01](networking.md#n-01-clusterip-service), and [C-01](configuration.md#c-01-configmap-environment-variable) as the reference components.
 

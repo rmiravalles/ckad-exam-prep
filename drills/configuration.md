@@ -1,6 +1,6 @@
-# Configuration Drills
+# 🔐 Configuration Drills
 
-## C-01: ConfigMap environment variable
+## 🧪 C-01: ConfigMap environment variable
 
 - **Difficulty:** Core
 - **Target time:** 6 minutes

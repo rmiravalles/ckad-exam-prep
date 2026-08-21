@@ -1,26 +1,26 @@
-# CKAD Session Summary Template
+# 📝 CKAD Session Summary Template
 
-## Session Metadata
+## 📌 Session Metadata
 - **Session number:**
 - **Date:**
 - **Days until exam:**
 - **Topic(s) covered:**
 - **Session mode:** cold recall / line-by-line / timed simulation
 
-## What we practiced
+## 🧪 What we practiced
 - 
 
-## Corrections made
+## 🔎 Corrections made
 - 
 
-## Patterns locked in
+## 🔒 Patterns locked in
 - 
 
-## Recurring mistakes
+## ⚠️ Recurring mistakes
 - 
 
-## Next drill targets
+## 🎯 Next drill targets
 - 
 
-## Notes for next session
+## ➡️ Notes for next session
 - 

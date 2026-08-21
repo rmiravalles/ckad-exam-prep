@@ -1,6 +1,6 @@
-# Workload Answer Keys
+# 🔑 Workload Answer Keys
 
-## W-01: Deployment with container port
+## ✅ W-01: Deployment with container port
 
 ```yaml
 apiVersion: apps/v1

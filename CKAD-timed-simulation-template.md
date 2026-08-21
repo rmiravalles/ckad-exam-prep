@@ -1,6 +1,6 @@
-# CKAD Timed Simulation Template
+# ⏱️ CKAD Timed Simulation Template
 
-## Simulation metadata
+## 📝 Simulation metadata
 
 - **Date:**
 - **Simulation ID:**
@@ -9,14 +9,14 @@
 - **Topics included:**
 - **Cluster / namespace:**
 
-## Rules
+## 📏 Rules
 
 - Work from the scenarios only; do not open answer keys until review.
 - Use official Kubernetes documentation and `kubectl` help only if the intended practice mode allows it.
 - Record the elapsed time and outcome for every task.
 - Verify each task before moving on when time permits.
 
-## Tasks
+## 🧪 Tasks
 
 | Task | Drill ID | Target time | Started | Finished | Result | Verification note |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -25,7 +25,7 @@
 | 3 |  |  |  |  |  |  |
 | 4 |  |  |  |  |  |  |
 
-## Review
+## 🔎 Review
 
 - **Tasks completed correctly:**
 - **Time lost to:**

@@ -1,6 +1,6 @@
-# CKAD Sample Manifests
+# 📄 CKAD Sample Manifests
 
-## Pod
+## 📦 Pod
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -12,7 +12,7 @@ spec:
     image: nginx
 ```
 
-## Deployment
+## 🔁 Deployment
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -35,7 +35,7 @@ spec:
         - containerPort: 80
 ```
 
-## Service
+## 🌐 Service
 ```yaml
 apiVersion: v1
 kind: Service
@@ -50,7 +50,7 @@ spec:
     targetPort: 80
 ```
 
-## ConfigMap + Pod env
+## 🔐 ConfigMap + Pod env
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -75,7 +75,7 @@ spec:
           key: LOG_LEVEL
 ```
 
-## Secret + Pod env
+## 🔒 Secret + Pod env
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -101,7 +101,7 @@ spec:
           key: PASSWORD
 ```
 
-## Job
+## ✅ Job
 ```yaml
 apiVersion: batch/v1
 kind: Job
@@ -117,7 +117,7 @@ spec:
         command: ["sh", "-c", "echo hello"]
 ```
 
-## CronJob
+## ⏱️ CronJob
 ```yaml
 apiVersion: batch/v1
 kind: CronJob
@@ -136,7 +136,7 @@ spec:
             command: ["sh", "-c", "date"]
 ```
 
-## PVC
+## 💾 PVC
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -150,7 +150,7 @@ spec:
       storage: 1Gi
 ```
 
-## Pod with PVC
+## 💾 Pod with PVC
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -169,7 +169,7 @@ spec:
       claimName: sample-pvc
 ```
 
-## Pod with liveness/readiness probes
+## 🩺 Pod with liveness/readiness probes
 ```yaml
 apiVersion: v1
 kind: Pod

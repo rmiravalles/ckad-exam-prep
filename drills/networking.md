@@ -1,6 +1,6 @@
-# Networking Drills
+# 🌐 Networking Drills
 
-## N-01: ClusterIP Service
+## 🧪 N-01: ClusterIP Service
 
 - **Difficulty:** Core
 - **Target time:** 6 minutes

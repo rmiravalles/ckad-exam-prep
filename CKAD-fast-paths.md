@@ -1,8 +1,8 @@
-# CKAD Fast Paths
+# ⚡ CKAD Fast Paths
 
 Generate a base object quickly, then edit only the fields the scenario requires. Always inspect generated YAML before applying it.
 
-## Pod
+## 📦 Pod
 
 ```sh
 kubectl run NAME --image=IMAGE --restart=Never --dry-run=client -o yaml > pod.yaml
@@ -10,7 +10,7 @@ kubectl run NAME --image=IMAGE --restart=Never --dry-run=client -o yaml > pod.ya
 
 Common edits: `command`, `args`, `env`, `ports`, `volumeMounts`, `volumes`, and probes.
 
-## Deployment
+## 🔁 Deployment
 
 ```sh
 kubectl create deployment NAME --image=IMAGE --dry-run=client -o yaml > deployment.yaml
@@ -18,7 +18,7 @@ kubectl create deployment NAME --image=IMAGE --dry-run=client -o yaml > deployme
 
 Common edits: `replicas`, labels and selector, container port, configuration injection, and probes.
 
-## Service
+## 🌐 Service
 
 ```sh
 kubectl expose deployment NAME --port=80 --target-port=8080 --type=ClusterIP --dry-run=client -o yaml > service.yaml
@@ -26,7 +26,7 @@ kubectl expose deployment NAME --port=80 --target-port=8080 --type=ClusterIP --d
 
 Immediately verify the selector against the Deployment Pod-template labels.
 
-## ConfigMap and Secret
+## 🔐 ConfigMap and Secret
 
 ```sh
 kubectl create configmap NAME --from-literal=KEY=VALUE --dry-run=client -o yaml > configmap.yaml
@@ -35,7 +35,7 @@ kubectl create secret generic NAME --from-literal=KEY=VALUE --dry-run=client -o 
 
 Common edits: add more keys, then reference the exact name and key from `env`, `envFrom`, or a volume.
 
-## Job and CronJob
+## ⏱️ Job and CronJob
 
 ```sh
 kubectl create job NAME --image=busybox --dry-run=client -o yaml > job.yaml
@@ -44,7 +44,7 @@ kubectl create cronjob NAME --image=busybox --schedule='*/5 * * * *' --dry-run=c
 
 For Job templates, set a valid `restartPolicy` and provide the intended command.
 
-## Explain before guessing
+## 🔎 Explain before guessing
 
 ```sh
 kubectl explain pod.spec.containers.livenessProbe

@@ -1,6 +1,6 @@
-# Workload Drills
+# 🔁 Workload Drills
 
-## W-01: Deployment with container port
+## 🧪 W-01: Deployment with container port
 
 - **Difficulty:** Core
 - **Target time:** 6 minutes

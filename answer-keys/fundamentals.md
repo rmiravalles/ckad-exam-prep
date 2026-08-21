@@ -1,6 +1,6 @@
-# Fundamentals Answer Keys
+# 🔑 Fundamentals Answer Keys
 
-## F-01: Pod command and arguments
+## ✅ F-01: Pod command and arguments
 
 ```yaml
 apiVersion: v1

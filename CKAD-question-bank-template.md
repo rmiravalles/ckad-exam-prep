@@ -1,8 +1,8 @@
-# CKAD Question Bank Template
+# 🧪 CKAD Question Bank Template
 
 Keep each question as a scenario with no hints.
 
-## Question format
+## 📋 Question format
 - **ID:**
 - **Topic:**
 - **Difficulty:**
@@ -12,5 +12,5 @@ Keep each question as a scenario with no hints.
 - **Common traps:**
 - **Source / notes:**
 
-## Question bank
+## 🗂️ Question bank
 

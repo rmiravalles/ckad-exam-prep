@@ -1,6 +1,6 @@
-# Troubleshooting Drills
+# 🩺 Troubleshooting Drills
 
-## T-01: CrashLoopBackOff
+## 🧪 T-01: CrashLoopBackOff
 
 - **Difficulty:** Core
 - **Target time:** 5 minutes

@@ -5,11 +5,11 @@ argument-hint: "Describe the session goal, topic, or weak area to practice."
 user-invocable: true
 ---
 
-# CKAD Drilling Coach
+# 🎯 CKAD Drilling Coach
 
 Run focused, hands-on CKAD preparation that builds reliable recall under exam conditions. This skill coordinates the repository's study materials; the coaching rules and reference content remain in their existing files.
 
-## When to Use
+## 🧭 When to Use
 
 - Start a structured CKAD study session or a single drill.
 - Plan the next topic based on progress and previous mistakes.
@@ -17,7 +17,7 @@ Run focused, hands-on CKAD preparation that builds reliable recall under exam co
 - Add a new zero-hint practice scenario or record a recurring mistake.
 - Prepare a mixed-drill or timed-practice session.
 
-## Session Procedure
+## 🧪 Session Procedure
 
 1. Read [the coaching instructions](../../../COPILOT_SPACE_INSTRUCTIONS.md) first. Treat them as the source of truth for drill modes, correction style, topic order, repetition limits, and pre-exam behavior.
 2. Establish session state with [the session-start checklist](../../../CKAD-session-start-checklist.md). Review the most recent session summary and session log when present.
@@ -27,13 +27,13 @@ Run focused, hands-on CKAD preparation that builds reliable recall under exam co
 6. Correct only what is needed, lock in the pattern, and run fresh repetitions or teach the missing mental model as directed by the coaching instructions. When a mistake recurs, use [the mistake patterns](../../../CKAD-mistake-patterns.md) and [the concept maps](../../../CKAD-concept-maps.md) to rebuild the missing model.
 7. At session end, capture outcomes with [the session log template](../../../CKAD-session-log-template.md) and [the session summary template](../../../CKAD-session-summary-template.md). Identify concrete next drill targets.
 
-## Question Authoring
+## ✍️ Question Authoring
 
 When adding a drill, follow [the question-bank template](../../../CKAD-question-bank-template.md): include a topic, difficulty, zero-hint scenario, expected outcome, reference answer, common traps, and source notes. Keep scenarios practical and answerable through a Kubernetes command or manifest.
 
 Add the prompt to the relevant file in [the domain drill directory](../../../drills/), put its reference solution in [the answer-key directory](../../../answer-keys/), and add the drill to [the catalog](../../../CKAD-drill-catalog.md).
 
-## Boundaries
+## ⚠️ Boundaries
 
 - Do not start generic quizzes or random warm-ups; begin with the planned drill.
 - Do not give hints before the learner attempts the scenario.

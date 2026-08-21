@@ -1,6 +1,6 @@
-# Configuration Answer Keys
+# 🔑 Configuration Answer Keys
 
-## C-01: ConfigMap environment variable
+## ✅ C-01: ConfigMap environment variable
 
 ```yaml
 apiVersion: v1

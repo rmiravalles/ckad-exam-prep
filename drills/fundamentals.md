@@ -1,6 +1,6 @@
-# Fundamentals Drills
+# 🧱 Fundamentals Drills
 
-## F-01: Pod command and arguments
+## 🧪 F-01: Pod command and arguments
 
 - **Difficulty:** Foundation
 - **Target time:** 4 minutes

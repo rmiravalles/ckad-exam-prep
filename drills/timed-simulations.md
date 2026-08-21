@@ -1,6 +1,6 @@
-# Timed Simulations
+# ⏱️ Timed Simulations
 
-## M-01: Mixed fundamentals
+## 🧪 M-01: Mixed fundamentals
 
 - **Difficulty:** Timed
 - **Target time:** 20 minutes

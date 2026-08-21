@@ -1,10 +1,10 @@
-# CKAD Exam Prep
+# 🚀 CKAD Exam Prep
 
 A focused workspace for building Kubernetes Certified Application Developer (CKAD) fluency through hands-on, memory-first practice. It is designed around short, repeatable drills: solve a realistic scenario with no hints, compare the result against a trusted reference, capture the correction, then repeat with fresh values until the pattern is reliable.
 
 This repository is a study system, not a substitute for the official CKAD curriculum or Kubernetes documentation. Use it alongside a Kubernetes environment where you can create, inspect, and troubleshoot resources.
 
-## Study approach
+## 🧭 Study approach
 
 The intended loop is:
 
@@ -18,7 +18,7 @@ The intended loop is:
 
 The coach guidance in [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS.md) defines the expected progression: mental model, syntax, drill, then timed repetition. It also gives the recommended topic order and rules for cold-recall, line-by-line, and pre-exam practice.
 
-## Quick start
+## ⚡ Quick start
 
 1. Read [CKAD-topic-checklist.md](CKAD-topic-checklist.md) and select one unchecked topic.
 2. Copy the session templates when beginning a new session:
@@ -31,7 +31,7 @@ The coach guidance in [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS
 
 For a more structured flow, choose a prompt from [CKAD-drill-catalog.md](CKAD-drill-catalog.md), validate it with [CKAD-validation-checklist.md](CKAD-validation-checklist.md), and consult its answer key only after attempting the scenario.
 
-## Using the Copilot skill
+## 🤖 Using the Copilot skill
 
 This repository includes the [CKAD Drilling Coach skill](.github/skills/ckad-drilling-coach/SKILL.md), which turns the study materials into structured Copilot-led sessions.
 
@@ -51,7 +51,7 @@ In VS Code Copilot Chat, invoke it directly with `/ckad-drilling-coach`, followe
 
 Copilot can also load the skill automatically when you ask to start a CKAD drill, practice Kubernetes manifests, review a session, plan CKAD study, record mistakes, or prepare for the exam. The skill reads the existing instructions and templates, establishes the session state, gives one zero-hint scenario at a time, verifies answers against trusted references, and records the session outcome.
 
-## Repository contents
+## 🗂️ Repository contents
 
 | File | Purpose |
 | --- | --- |
@@ -75,7 +75,7 @@ Copilot can also load the skill automatically when you ask to start a CKAD drill
 | [sources.md](sources.md) | Official and local sources for verifying drills and answer keys. |
 | [.github/skills/ckad-drilling-coach/SKILL.md](.github/skills/ckad-drilling-coach/SKILL.md) | Copilot skill for running and reviewing structured CKAD study sessions. |
 
-## Recommended habits
+## ✅ Recommended habits
 
 - Practice from memory first; use references to correct work, not to replace recall.
 - Validate manifests with `kubectl apply`, `kubectl get`, `kubectl describe`, and logs in a disposable practice namespace or cluster.

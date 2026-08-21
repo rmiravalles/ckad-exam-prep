@@ -1,8 +1,8 @@
-# CKAD Session Log Template
+# 📝 CKAD Session Log Template
 
 Append only. Record notable corrections, recurring mistakes, and patterns that are now locked.
 
-## Log entry format
+## 📋 Log entry format
 - **Date:**
 - **Session number:**
 - **Topic:**
@@ -11,5 +11,5 @@ Append only. Record notable corrections, recurring mistakes, and patterns that a
 - **Locked pattern / memory cue:**
 - **Follow-up drill needed:**
 
-## Entries
+## 📚 Entries
 

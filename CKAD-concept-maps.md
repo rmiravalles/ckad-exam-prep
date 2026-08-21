@@ -1,8 +1,8 @@
-# CKAD Concept Maps
+# 🧠 CKAD Concept Maps
 
 Use these compact maps when a repeated miss shows that syntax is present but the underlying behavior is not.
 
-## Workload to network traffic
+## 🌐 Workload to network traffic
 
 ```text
 Deployment selector -> Pod-template labels -> ready Pods
@@ -11,7 +11,7 @@ Service selector -> matching ready Pods -> Endpoints -> traffic to targetPort
 
 The Deployment and Service selectors are independent. They must each match the labels they select.
 
-## Container startup
+## 📦 Container startup
 
 ```text
 Image defaults
@@ -23,7 +23,7 @@ Image defaults
 
 An immediately exiting process can cause restart loops depending on the Pod restart policy.
 
-## Configuration delivery
+## 🔐 Configuration delivery
 
 ```text
 ConfigMap or Secret
@@ -34,7 +34,7 @@ ConfigMap or Secret
 
 Choose environment variables for process configuration and mounted files when the application expects files. Confirm names and keys exactly.
 
-## Health and availability
+## 🩺 Health and availability
 
 ```text
 startupProbe protects initialization
@@ -44,7 +44,7 @@ livenessProbe restarts an unhealthy container
 
 These probes answer different operational questions and should not be used interchangeably.
 
-## Persistent storage
+## 💾 Persistent storage
 
 ```text
 PVC request -> matching storage -> PVC bound

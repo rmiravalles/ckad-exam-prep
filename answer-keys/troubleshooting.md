@@ -1,6 +1,6 @@
-# Troubleshooting Answer Keys
+# 🔑 Troubleshooting Answer Keys
 
-## T-01: CrashLoopBackOff
+## ✅ T-01: CrashLoopBackOff
 
 Start with evidence:
 

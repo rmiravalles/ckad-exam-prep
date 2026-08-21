@@ -1,6 +1,6 @@
-# kubectl Cheat Sheet for CKAD
+# ⚡ kubectl Cheat Sheet for CKAD
 
-## Fast creation
+## 🏗️ Fast creation
 - Create from scratch with YAML output:
   - `kubectl create deployment NAME --image=IMAGE --dry-run=client -o yaml`
   - `kubectl run NAME --image=IMAGE --restart=Never --dry-run=client -o yaml`
@@ -10,7 +10,7 @@
   - `kubectl create secret generic NAME --from-literal=KEY=VALUE --dry-run=client -o yaml`
   - `kubectl expose deployment NAME --port=80 --target-port=8080 --type=ClusterIP --dry-run=client -o yaml`
 
-## Inspect
+## 🔎 Inspect
 - `kubectl get pods`
 - `kubectl get deploy`
 - `kubectl get svc`
@@ -23,22 +23,22 @@
 - `kubectl logs POD`
 - `kubectl exec -it POD -- sh`
 
-## Apply and edit
+## ✏️ Apply and edit
 - `kubectl apply -f FILE.yaml`
 - `kubectl edit deployment NAME`
 - `kubectl replace -f FILE.yaml`
 - `kubectl delete -f FILE.yaml`
 
-## Output
+## 📤 Output
 - `kubectl get pod POD -o yaml`
 - `kubectl get pod POD -o wide`
 - `kubectl get pod POD -o jsonpath='{...}'`
 
-## Debugging
+## 🩺 Debugging
 - `kubectl explain PODSPEC_FIELD`
 - `kubectl logs POD -c CONTAINER`
 - `kubectl exec -it POD -c CONTAINER -- sh`
 - `kubectl describe` before editing
 
-## CKAD habit
+## 🎯 CKAD habit
 - Prefer `--dry-run=client -o yaml` to generate the base manifest, then edit only what is needed.

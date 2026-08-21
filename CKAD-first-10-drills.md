@@ -1,4 +1,4 @@
-# CKAD First 10 Drills
+# 🧪 CKAD First 10 Drills
 
 Use these as starter drills. Keep them zero-hint and force full recall from memory.
 
@@ -13,7 +13,7 @@ Use these as starter drills. Keep them zero-hint and force full recall from memo
 9. Create a Pod with an init container and shared emptyDir volume.
 10. Create a PersistentVolumeClaim and mount it into a Pod.
 
-## Drill format
+## 📋 Drill format
 - Scenario
 - Student answer from memory
 - Inline correction

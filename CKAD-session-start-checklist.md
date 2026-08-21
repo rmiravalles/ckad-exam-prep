@@ -1,4 +1,4 @@
-# CKAD Session Start Checklist
+# 🚦 CKAD Session Start Checklist
 
 Use this at the beginning of every session.
 
@@ -13,7 +13,7 @@ Use this at the beginning of every session.
 9. State the plan for this session.
 10. Begin with the planned drill.
 
-## Do not
+## ⚠️ Do not
 - Skip the review step.
 - Start with a generic quiz.
 - Introduce new topics without a reason.
