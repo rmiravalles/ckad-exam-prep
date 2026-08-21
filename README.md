@@ -21,10 +21,7 @@ The coach guidance in [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS
 ## ⚡ Quick start
 
 1. Read [CKAD-topic-checklist.md](CKAD-topic-checklist.md) and select one unchecked topic.
-2. Copy the session templates when beginning a new session:
-	- [CKAD-session-start-checklist.md](CKAD-session-start-checklist.md)
-	- [CKAD-session-log-template.md](CKAD-session-log-template.md)
-	- [CKAD-session-summary-template.md](CKAD-session-summary-template.md)
+2. Use [CKAD-session.md](CKAD-session.md) when beginning a new session: the start checklist, append-only log, and end-of-session summary template.
 3. Start with a relevant prompt from [CKAD-first-10-drills.md](CKAD-first-10-drills.md), or add a scenario to [CKAD-question-bank-template.md](CKAD-question-bank-template.md).
 4. Build and test your answer in a Kubernetes cluster. Use [kubectl-cheat-sheet.md](kubectl-cheat-sheet.md) to generate base manifests quickly and inspect results.
 5. Compare your work with [CKAD-sample-manifests.md](CKAD-sample-manifests.md) where applicable, then log the correction and schedule a fresh repetition.
@@ -57,9 +54,7 @@ Copilot can also load the skill automatically when you ask to start a CKAD drill
 | --- | --- |
 | [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS.md) | Instructions for running disciplined CKAD coaching sessions, including drill modes and correction rules. |
 | [CKAD-topic-checklist.md](CKAD-topic-checklist.md) | Tracks the CKAD topics to practice, from fundamentals through timed simulations. |
-| [CKAD-session-start-checklist.md](CKAD-session-start-checklist.md) | Ensures each study session starts from prior context and a concrete plan. |
-| [CKAD-session-log-template.md](CKAD-session-log-template.md) | Append-only record of mistakes, corrections, memory cues, and follow-up drills. |
-| [CKAD-session-summary-template.md](CKAD-session-summary-template.md) | End-of-session review of practice, locked patterns, recurring mistakes, and next targets. |
+| [CKAD-session.md](CKAD-session.md) | Session start checklist, append-only mistake/correction log, and end-of-session summary template. |
 | [CKAD-first-10-drills.md](CKAD-first-10-drills.md) | Starter scenarios covering common CKAD resource types and patterns. |
 | [CKAD-question-bank-template.md](CKAD-question-bank-template.md) | Format for adding your own zero-hint scenarios with reference answers and common traps. |
 | [CKAD-sample-manifests.md](CKAD-sample-manifests.md) | Reference YAML for common Pods, workloads, Services, configuration, probes, and storage. |
