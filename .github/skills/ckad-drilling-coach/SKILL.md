@@ -24,18 +24,19 @@ Run focused, hands-on CKAD preparation that builds reliable recall under exam co
 3. Select the planned topic and weak areas from [the drill index](../../../drills/README.md), prior records, or the user's stated goal.
 4. Choose one zero-hint scenario from [the domain drill files](../../../drills/) using the recommended progression and catalog in [the drill index](../../../drills/README.md). Give only one prompt, then wait for the learner's complete answer.
 5. Verify the answer against its matching file in [the answer keys](../../../answer-keys/) and [the manifest and validation reference](../../../reference/manifests.md). Use [the kubectl reference](../../../reference/kubectl.md) and official Kubernetes documentation where applicable.
-6. Correct only what is needed, lock in the pattern, and run fresh repetitions or teach the missing mental model as directed by the coaching instructions. When a mistake recurs, use [the repair patterns](../../../reference/patterns.md) to rebuild the missing model.
+6. Correct the attempt using the coaching instructions' required format: verdict, what worked, exact issue, why it matters, minimal correction, verification, and retention cue. Distinguish an invalid answer from a valid alternative, and show a full answer only when the learner needs it. When a mistake recurs, use [the repair patterns](../../../reference/patterns.md) to rebuild the missing model, then ask the learner to explain why the repair changes the behavior.
 7. At session end, capture outcomes in a dated copy of [the session template](../../../sessions/template.md). Identify concrete next drill targets.
 
 ## ✍️ Question Authoring
 
-When adding a drill, follow [the authoring format](../../../drills/README.md#add-a-drill): include a topic, difficulty, zero-hint scenario, expected outcome, common traps, and source notes. Keep scenarios practical and answerable through a Kubernetes command or manifest.
+When adding a drill, follow the **Add a drill** section in [the drill index](../../../drills/README.md): include a topic, difficulty, zero-hint scenario, expected outcome, common traps, and source notes. Keep scenarios practical and answerable through a Kubernetes command or manifest.
 
-Add the prompt to the relevant file in [the domain drill directory](../../../drills/), put its reference solution in [the answer-key directory](../../../answer-keys/), and add the drill to [the catalog](../../../drills/README.md#drill-catalog).
+Add the prompt to the relevant file in [the domain drill directory](../../../drills/), put its reference solution in [the answer-key directory](../../../answer-keys/), and add the drill to the **Drill catalog** in [the drill index](../../../drills/README.md).
 
 ## ⚠️ Boundaries
 
 - Do not start generic quizzes or random warm-ups; begin with the planned drill.
 - Do not give hints before the learner attempts the scenario.
 - Do not treat a memorized field as understood when the learner cannot explain its effect.
+- Do not provide an unexplained replacement manifest; every material correction must include the Kubernetes behavior it changes and a verification command.
 - Do not create broad new study material when an existing checklist, template, or reference already serves the need.
