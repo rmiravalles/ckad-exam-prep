@@ -16,23 +16,51 @@ Stop after three clean repetitions. If the same mistake occurs three times, paus
 
 ## 🤖 Using the Copilot skill
 
-This repository includes the [CKAD Drilling Coach skill](.github/skills/ckad-drilling-coach/SKILL.md), which turns the study materials into structured Copilot-led sessions.
-
-In VS Code Copilot Chat, invoke it directly with `/ckad-drilling-coach`, followed by a session goal, topic, or weak area. For example:
+This repository includes the [CKAD Drilling Coach skill](.github/skills/ckad-drilling-coach/SKILL.md), which turns the study materials into structured Copilot-led sessions. For deliberate practice, invoke it explicitly in VS Code Copilot Chat:
 
 ```text
-/ckad-drilling-coach Start a cold-recall session on ConfigMaps and Secrets.
+/ckad-drilling-coach MODE, TOPIC OR DRILL ID, TIME AVAILABLE, WEAK AREA, CORRECTION DEPTH
 ```
+
+Name the mode, a topic or drill ID from [the drill catalog](drills/README.md#drill-catalog), available time, and a known weak area when you have them. This lets the coach select the right scenario and feedback depth without a generic warm-up.
+
+| Mode | Use it when | Coach behavior |
+| --- | --- | --- |
+| `Cold recall` | You know the topic and want to test recall. | Gives one zero-hint scenario and waits for a complete answer. |
+| `Line-by-line` | The topic is new or unstable. | Explains each relevant field, why it exists, and what breaks when it is wrong. |
+| `Exam` | You are doing timed or final-review practice. | Keeps corrections concise and focuses on the minimal repair and verification. |
+
+### Effective prompts
+
+Start a focused cold-recall session:
 
 ```text
-/ckad-drilling-coach Review my recent mistake patterns and plan the next session.
+/ckad-drilling-coach Cold recall, C-02, 15 minutes. I confuse Secret volume items and paths. Use descriptive corrections.
 ```
+
+Learn a topic before returning to recall:
 
 ```text
-/ckad-drilling-coach Run a timed mixed drill for Pods, Services, and probes.
+/ckad-drilling-coach Teach W-03 line by line. I understand Deployments but not Kustomize overlays.
 ```
 
-Copilot can also load the skill automatically when you ask to start a CKAD drill, practice Kubernetes manifests, review a session, plan CKAD study, record mistakes, or prepare for the exam. The skill reads the existing instructions and templates, establishes the session state, gives one zero-hint scenario at a time, verifies answers against trusted references, and records the session outcome.
+Run a short timed review:
+
+```text
+/ckad-drilling-coach Run an exam-mode review of T-02 and T-03. I have 15 minutes; keep corrections concise.
+```
+
+Review an existing attempt rather than start a new drill:
+
+```text
+/ckad-drilling-coach Review my attempt for SS-02. Classify each issue, explain the Kubernetes behavior, show the minimal correction, and give me a verification command.
+```
+
+After an attempted drill, the coach reports what worked, the exact issue, why Kubernetes behaves that way, the minimal repair, an exact verification command, and a reusable retention cue. It distinguishes invalid work from valid alternatives and does not reveal a complete answer before an attempt.
+
+At the end of a session, ask the coach to create or update a dated record under [sessions/](sessions/) from [the session template](sessions/template.md). Record recurring mistakes, verification evidence, and the next drill ID so the next session starts from evidence rather than a random prompt.
+
+Copilot can load the skill automatically when you ask to start a CKAD drill, practice Kubernetes manifests, review a session, plan CKAD study, record mistakes, or prepare for the exam. Explicit invocation is preferable for a structured session because it makes the mode, scope, time limit, and correction depth clear.
 
 ## Repository layout
 
