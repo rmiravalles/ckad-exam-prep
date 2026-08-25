@@ -1,6 +1,22 @@
-# 📄 CKAD Sample Manifests
+# Manifest and Validation Reference
 
-## 📦 Pod
+Use this only after attempting a drill. Verify intended behavior, not merely that Kubernetes accepted the manifest.
+
+## General validation
+
+- Run `kubectl apply -f FILE.yaml`, then inspect the effective resource with `kubectl get RESOURCE NAME -o yaml`.
+- Check Events in `kubectl describe RESOURCE NAME` for scheduling, image, volume, selector, and probe failures.
+- For Pods, use `get`, `describe`, `logs`, and `exec` to confirm commands, arguments, environment variables, and mounts.
+- For Deployments, run `kubectl rollout status deployment/NAME`, verify replica counts, and confirm selectors match Pod-template labels.
+- For Services, inspect selectors and ports, then verify endpoints with `kubectl get endpoints NAME`.
+- For ConfigMaps, Secrets, and volumes, check referenced names and keys exactly. Confirm a PVC is `Bound` before expecting its Pod to start.
+- For Jobs and CronJobs, inspect completion, logs, schedule, and the Job template's `restartPolicy`.
+- For service accounts and security contexts, inspect the effective Pod YAML.
+
+## Minimal manifest patterns
+
+### Pod
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -12,7 +28,8 @@ spec:
     image: nginx
 ```
 
-## 🔁 Deployment
+### Deployment and Service
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -33,10 +50,7 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-```
-
-## 🌐 Service
-```yaml
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -50,7 +64,8 @@ spec:
     targetPort: 80
 ```
 
-## 🔐 ConfigMap + Pod env
+### Configuration
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -60,48 +75,18 @@ data:
   LOG_LEVEL: debug
 ---
 apiVersion: v1
-kind: Pod
-metadata:
-  name: cm-pod
-spec:
-  containers:
-  - name: app
-    image: nginx
-    env:
-    - name: LOG_LEVEL
-      valueFrom:
-        configMapKeyRef:
-          name: sample-cm
-          key: LOG_LEVEL
-```
-
-## 🔒 Secret + Pod env
-```yaml
-apiVersion: v1
 kind: Secret
 metadata:
   name: sample-secret
 type: Opaque
 stringData:
   PASSWORD: s3cr3t
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: secret-pod
-spec:
-  containers:
-  - name: app
-    image: nginx
-    env:
-    - name: PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: sample-secret
-          key: PASSWORD
 ```
 
-## ✅ Job
+Reference a ConfigMap with `configMapKeyRef` or a Secret with `secretKeyRef` from a container `env` entry. Match the object name and key exactly.
+
+### Job and CronJob
+
 ```yaml
 apiVersion: batch/v1
 kind: Job
@@ -115,10 +100,7 @@ spec:
       - name: app
         image: busybox
         command: ["sh", "-c", "echo hello"]
-```
-
-## ⏱️ CronJob
-```yaml
+---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -136,7 +118,8 @@ spec:
             command: ["sh", "-c", "date"]
 ```
 
-## 💾 PVC
+### PVC and mount
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -148,10 +131,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-```
-
-## 💾 Pod with PVC
-```yaml
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -169,7 +149,8 @@ spec:
       claimName: sample-pvc
 ```
 
-## 🩺 Pod with liveness/readiness probes
+### Liveness and readiness probes
+
 ```yaml
 apiVersion: v1
 kind: Pod

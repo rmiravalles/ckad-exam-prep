@@ -20,18 +20,18 @@ Run focused, hands-on CKAD preparation that builds reliable recall under exam co
 ## 🧪 Session Procedure
 
 1. Read [the coaching instructions](../../../COPILOT_SPACE_INSTRUCTIONS.md) first. Treat them as the source of truth for drill modes, correction style, topic order, repetition limits, and pre-exam behavior.
-2. Establish session state with [the session-start checklist](../../../CKAD-session.md). Review the most recent session summary and session log when present.
-3. Select the planned topic and weak areas from [the topic checklist](../../../CKAD-topic-checklist.md), [the drill catalog](../../../CKAD-drill-catalog.md), prior notes, or the user's stated goal.
-4. Choose one zero-hint scenario from [the domain drill files](../../../drills/), [the starter drills](../../../CKAD-first-10-drills.md), or [the question bank](../../../CKAD-question-bank-template.md). Give only one prompt, then wait for the learner's complete answer.
-5. Verify the answer against its matching file in [the answer keys](../../../answer-keys/) and [the validation checklist](../../../CKAD-validation-checklist.md). Use [sample manifests](../../../CKAD-sample-manifests.md), [the kubectl cheat sheet](../../../kubectl-cheat-sheet.md), and [the source list](../../../sources.md) where applicable.
-6. Correct only what is needed, lock in the pattern, and run fresh repetitions or teach the missing mental model as directed by the coaching instructions. When a mistake recurs, use [the mistake patterns](../../../CKAD-mistake-patterns.md) and [the concept maps](../../../CKAD-concept-maps.md) to rebuild the missing model.
-7. At session end, capture outcomes with [the session log](../../../CKAD-session.md) and [the session summary template](../../../CKAD-session.md). Identify concrete next drill targets.
+2. Establish session state with [the session template](../../../sessions/template.md). Review the most recent dated session record when present.
+3. Select the planned topic and weak areas from [the drill index](../../../drills/README.md), prior records, or the user's stated goal.
+4. Choose one zero-hint scenario from [the domain drill files](../../../drills/) using the recommended progression and catalog in [the drill index](../../../drills/README.md). Give only one prompt, then wait for the learner's complete answer.
+5. Verify the answer against its matching file in [the answer keys](../../../answer-keys/) and [the manifest and validation reference](../../../reference/manifests.md). Use [the kubectl reference](../../../reference/kubectl.md) and official Kubernetes documentation where applicable.
+6. Correct only what is needed, lock in the pattern, and run fresh repetitions or teach the missing mental model as directed by the coaching instructions. When a mistake recurs, use [the repair patterns](../../../reference/patterns.md) to rebuild the missing model.
+7. At session end, capture outcomes in a dated copy of [the session template](../../../sessions/template.md). Identify concrete next drill targets.
 
 ## ✍️ Question Authoring
 
-When adding a drill, follow [the question-bank template](../../../CKAD-question-bank-template.md): include a topic, difficulty, zero-hint scenario, expected outcome, reference answer, common traps, and source notes. Keep scenarios practical and answerable through a Kubernetes command or manifest.
+When adding a drill, follow [the authoring format](../../../drills/README.md#add-a-drill): include a topic, difficulty, zero-hint scenario, expected outcome, common traps, and source notes. Keep scenarios practical and answerable through a Kubernetes command or manifest.
 
-Add the prompt to the relevant file in [the domain drill directory](../../../drills/), put its reference solution in [the answer-key directory](../../../answer-keys/), and add the drill to [the catalog](../../../CKAD-drill-catalog.md).
+Add the prompt to the relevant file in [the domain drill directory](../../../drills/), put its reference solution in [the answer-key directory](../../../answer-keys/), and add the drill to [the catalog](../../../drills/README.md#drill-catalog).
 
 ## ⚠️ Boundaries
 

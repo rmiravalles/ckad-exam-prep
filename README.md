@@ -1,32 +1,18 @@
-# 🚀 CKAD Exam Prep
+# CKAD Exam Prep
 
-A focused workspace for building Kubernetes Certified Application Developer (CKAD) fluency through hands-on, memory-first practice. It is designed around short, repeatable drills: solve a realistic scenario with no hints, compare the result against a trusted reference, capture the correction, then repeat with fresh values until the pattern is reliable.
+Hands-on Kubernetes Certified Application Developer practice built around short, repeatable drills. Attempt a realistic scenario from memory, review it against a trusted answer key, correct the underlying pattern, and repeat with fresh values.
 
-This repository is a study system, not a substitute for the official CKAD curriculum or Kubernetes documentation. Use it alongside a Kubernetes environment where you can create, inspect, and troubleshoot resources.
+This is a study system, not a substitute for the official CKAD curriculum or Kubernetes documentation. Use it with a Kubernetes environment where you can create, inspect, and troubleshoot resources.
 
-## 🧭 Study approach
+## Start drilling
 
-The intended loop is:
+1. Open [the drill index](drills/README.md) and choose the next scenario.
+2. Attempt the prompt without hints in a disposable namespace or cluster.
+3. Review only afterward in the corresponding file under [answer-keys/](answer-keys/).
+4. Use [reference material](reference/) to repair a missed concept or verify a command.
+5. Record a session using [the session template](sessions/template.md), then schedule a fresh repetition.
 
-1. Choose the next topic and any weak areas from the topic checklist and prior session notes.
-2. Start a session with the session-start checklist.
-3. Attempt one scenario from memory, without hints.
-4. Verify the manifest or command against an answer key, reference material, or the Kubernetes API.
-5. Record meaningful mistakes and the corrected pattern.
-6. Repeat the scenario with different names and values. Stop after three clean repetitions; if the same mistake persists, pause to rebuild the underlying concept before drilling again.
-7. End by writing a concise session summary and setting the next drill targets.
-
-The coach guidance in [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS.md) defines the expected progression: mental model, syntax, drill, then timed repetition. It also gives the recommended topic order and rules for cold-recall, line-by-line, and pre-exam practice.
-
-## ⚡ Quick start
-
-1. Read [CKAD-topic-checklist.md](CKAD-topic-checklist.md) and select one unchecked topic.
-2. Use [CKAD-session.md](CKAD-session.md) when beginning a new session: the start checklist, append-only log, and end-of-session summary template.
-3. Start with a relevant prompt from [CKAD-first-10-drills.md](CKAD-first-10-drills.md), or add a scenario to [CKAD-question-bank-template.md](CKAD-question-bank-template.md).
-4. Build and test your answer in a Kubernetes cluster. Use [kubectl-cheat-sheet.md](kubectl-cheat-sheet.md) to generate base manifests quickly and inspect results.
-5. Compare your work with [CKAD-sample-manifests.md](CKAD-sample-manifests.md) where applicable, then log the correction and schedule a fresh repetition.
-
-For a more structured flow, choose a prompt from [CKAD-drill-catalog.md](CKAD-drill-catalog.md), validate it with [CKAD-validation-checklist.md](CKAD-validation-checklist.md), and consult its answer key only after attempting the scenario.
+Stop after three clean repetitions. If the same mistake occurs three times, pause and rebuild the mental model before resuming.
 
 ## 🤖 Using the Copilot skill
 
@@ -48,27 +34,24 @@ In VS Code Copilot Chat, invoke it directly with `/ckad-drilling-coach`, followe
 
 Copilot can also load the skill automatically when you ask to start a CKAD drill, practice Kubernetes manifests, review a session, plan CKAD study, record mistakes, or prepare for the exam. The skill reads the existing instructions and templates, establishes the session state, gives one zero-hint scenario at a time, verifies answers against trusted references, and records the session outcome.
 
-## 🗂️ Repository contents
+## Repository layout
 
-| File | Purpose |
+| Location | Purpose |
 | --- | --- |
-| [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS.md) | Instructions for running disciplined CKAD coaching sessions, including drill modes and correction rules. |
-| [CKAD-topic-checklist.md](CKAD-topic-checklist.md) | Tracks the CKAD topics to practice, from fundamentals through timed simulations. |
-| [CKAD-session.md](CKAD-session.md) | Session start checklist, append-only mistake/correction log, and end-of-session summary template. |
-| [CKAD-first-10-drills.md](CKAD-first-10-drills.md) | Starter scenarios covering common CKAD resource types and patterns. |
-| [CKAD-question-bank-template.md](CKAD-question-bank-template.md) | Format for adding your own zero-hint scenarios with reference answers and common traps. |
-| [CKAD-sample-manifests.md](CKAD-sample-manifests.md) | Reference YAML for common Pods, workloads, Services, configuration, probes, and storage. |
-| [kubectl-cheat-sheet.md](kubectl-cheat-sheet.md) | Fast creation, inspection, debugging, and YAML-generation commands for practice. |
-| [CKAD-drill-catalog.md](CKAD-drill-catalog.md) | Index of zero-hint drills, their difficulty, time budgets, prerequisites, and answer keys. |
-| [drills/](drills/) | Domain-organized zero-hint drills, including fundamentals, configuration, workloads, networking, storage, troubleshooting, and timed simulations. |
-| [answer-keys/](answer-keys/) | Reference solutions and validation steps, separated from prompts to preserve recall practice. |
-| [CKAD-validation-checklist.md](CKAD-validation-checklist.md) | Resource-specific checks for verifying intended Kubernetes behavior. |
-| [CKAD-mistake-patterns.md](CKAD-mistake-patterns.md) | Curated recurring mistakes, mental models, corrections, and repair drills. |
-| [CKAD-timed-simulation-template.md](CKAD-timed-simulation-template.md) | Template for planning, running, and reviewing timed mixed drills. |
-| [CKAD-fast-paths.md](CKAD-fast-paths.md) | Fast `kubectl` generation patterns and high-frequency edits. |
-| [CKAD-concept-maps.md](CKAD-concept-maps.md) | Compact mental models for common conceptual failure points. |
-| [sources.md](sources.md) | Official and local sources for verifying drills and answer keys. |
-| [.github/skills/ckad-drilling-coach/SKILL.md](.github/skills/ckad-drilling-coach/SKILL.md) | Copilot skill for running and reviewing structured CKAD study sessions. |
+| [drills/](drills/) | Zero-hint scenarios organized by domain. Start with [the drill index](drills/README.md). |
+| [answer-keys/](answer-keys/) | Matching reference solutions and validation steps. |
+| [reference/](reference/) | Command recall, manifest examples, validation checks, mental models, and recurring repair drills. |
+| [sessions/](sessions/) | Reusable regular and timed-session template plus your dated session records. |
+| [COPILOT_SPACE_INSTRUCTIONS.md](COPILOT_SPACE_INSTRUCTIONS.md) | The coaching contract used by the Copilot skill. |
+| [.github/skills/ckad-drilling-coach/SKILL.md](.github/skills/ckad-drilling-coach/SKILL.md) | Copilot skill for running and reviewing structured study sessions. |
+
+## Sources
+
+- [CKAD certification overview](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/)
+- [Kubernetes documentation](https://kubernetes.io/docs/)
+- [Kubernetes API reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [kubectl reference](https://kubernetes.io/docs/reference/kubectl/)
+- [Kubernetes task guides](https://kubernetes.io/docs/tasks/)
 
 ## ✅ Recommended habits
 
