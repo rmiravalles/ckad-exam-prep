@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx-ckad
+  name: nginx-ckad
+  namespace: ckad
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx-ckad
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
