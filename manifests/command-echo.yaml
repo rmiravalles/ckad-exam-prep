@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: command-echo
+  name: command-echo
+  namespace: ckad
+spec:
+  containers:
+  - image: ubuntu:24.04
+    name: command-echo
+    command: ["/bin/sh", "-c"]
+    args:
+      - "echo 'Container started'; date; sleep 3600"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: env-expansion
+  name: env-expansion
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: env-expansion
+    command: ["sh", "-c"]
+    args:
+      - 'echo "The application is running in $APP_ENV"'
+    env:
+      - name: APP_ENV
+        value: development
+      - name: APP_VERSION
+        value: 2.0.0
+      - name: LOG_LEVEL
+        value: debug
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
