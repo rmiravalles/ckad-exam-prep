@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web-app
+  name: web-app
+  namespace: ckad
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-app
+      tier: frontend
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: web-app
+        tier: frontend
+    spec:
+      containers:
+      - image: nginx:1.27
+        name: web
+        ports:
+          - containerPort: 80
