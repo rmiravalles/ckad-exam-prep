@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: report-cron
+  namespace: ckad
+spec:
+  jobTemplate:
+    metadata:
+      name: report-cron
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: busybox:1.36
+            name: report-cron
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: "*/2 * * * *"
+status: {}
