@@ -14,7 +14,7 @@ spec:
           - image: busybox:1.36
             name: cleanup
             command: ["sh", "-c"]
-            args: ["echo 'fff'; sleep 10"]
+            args: ["echo 'Cleaning temporary data..."]
           restartPolicy: Never
   schedule: '*/5 * * * *'
   timeZone: "Europe/Madrid"

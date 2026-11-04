@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-demo
+  namespace: ckad
+spec:
+  initContainers:
+    - name: initialization
+      image: busybox:1.36
+      command: ["sh", "-c"]
+      args:
+        - echo "Initializing application...";
+          sleep 10;
+          echo "Initialization completed"
+
+  containers:
+    - name: application
+      image: nginx:1.27
+      ports:
+        - containerPort: 80
