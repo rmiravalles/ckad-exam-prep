@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storage-app
+  namespace: ckad
+spec:
+  containers:
+    - name: application
+      image: busybox:1.36
+      command: ["sh", "-c"]
+      args: ["echo 'CKAD persistent storage test' > /data/test.txt; sleep 3600"]
+      volumeMounts:
+        - name: storage
+          mountPath: /data
+
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: app-pvc
