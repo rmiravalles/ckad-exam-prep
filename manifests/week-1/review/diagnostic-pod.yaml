@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: diagnostic-pod
+  name: diagnostic-pod
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: diagnostic
+    env:
+    - name: APP_NAME
+      value: diagnostic-service
+    - name: APP_ENV
+      value: production
+    command: ["/bin/sh", "-c"]
+    args:
+     - "echo 'Application: $APP_NAME'; echo 'Environment: $APP_ENV'; sleep 3600"
+  restartPolicy: Never

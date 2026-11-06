@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assessment-web
+  namespace: ckad
+  labels:
+    app: assessment-web
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: assessment-web
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: assessment-web
+        tier: frontend
+    spec:
+      containers:
+      - name: web
+        image: nginx:1.27
+        ports:
+        - containerPort: 80

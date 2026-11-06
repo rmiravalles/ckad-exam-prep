@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: assessment-job
+  namespace: ckad
+spec:
+  completions: 3
+  parallelism: 2
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+      - name: worker
+        image: busybox:1.36
+        command: ["/bin/sh", "-c"]
+        args: ["echo 'Batch processing completed'"]
+      restartPolicy: Never

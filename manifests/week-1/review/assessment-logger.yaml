@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: assessment-logger
+  namespace: ckad
+spec:
+  containers:
+    - name: app
+      image: busybox:1.36
+      command: ["sh", "-c"]
+      args:
+        - |
+          while true; do
+            echo "Application is running" >> /var/log/app/application.log
+            sleep 5
+          done
+      volumeMounts:
+        - name: logs
+          mountPath: /var/log/app
+
+    - name: logger
+      image: busybox:1.36
+      command: ["sh", "-c"]
+      args:
+        - |
+          while true; do
+            echo "Processing logs:"
+            tail -n 5 /var/log/app/application.log 2>/dev/null || true
+            sleep 10
+          done
+      volumeMounts:
+        - name: logs
+          mountPath: /var/log/app
+
+  volumes:
+    - name: logs
+      emptyDir: {}
+
