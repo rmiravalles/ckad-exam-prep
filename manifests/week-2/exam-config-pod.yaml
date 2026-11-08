@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: exam-config-pod
+  name: exam-config-pod
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: application
+    command: ["/bin/sh", "-c"]
+    args: ["echo 'App name: $APP_NAME, Environment: $APP_ENV, Database host: $DATABASE_HOST'; sleep 3600"]
+    envFrom:
+      - configMapRef:
+          name: api-config
+  restartPolicy: Never

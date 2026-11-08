@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: api-file-pod
+  name: api-file-pod
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: api
+    command: ["/bin/sh", "-c"]
+    args: ["cat /etc/api-config/application.properties; sleep 3600"]
+    volumeMounts:
+      - name: config-volume
+        mountPath: /etc/api-config
+        readOnly: true
+  volumes:
+    - name: config-volume
+      configMap:
+        name: api-properties
+  restartPolicy: Never

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-properties
+  namespace: ckad
+data:
+  application.properties: |
+    service.name=customer-api
+    service.environment=production
+    service.loglevel=DEBUG

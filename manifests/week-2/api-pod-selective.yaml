@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: api-pod-selective
+  name: api-pod-selective
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: api
+    command: ["/bin/sh", "-c"]
+    args: ["echo 'Service name: $SERVICE_NAME, Environment: $APP_ENV'; sleep 3600"]
+    env:
+     - name: SERVICE_NAME
+       valueFrom:
+         configMapKeyRef:
+           name: api-config
+           key: APP_NAME
+     - name: APP_ENV
+       valueFrom:
+         configMapKeyRef:
+           name: api-config
+           key: APP_ENV
+
+  restartPolicy: Never
+
