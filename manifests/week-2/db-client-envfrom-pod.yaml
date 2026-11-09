@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: db-client-envfrom
+  name: db-client-envfrom
+  namespace: ckad
+spec:
+  containers:
+  - image: busybox:1.36
+    name: client
+    command: ["/bin/sh", "-c"]
+    args: ["echo 'username: $username, password: $password'; sleep 3600"]
+    envFrom:
+      - secretRef:
+          name: db-credentials
+  restartPolicy: Never
